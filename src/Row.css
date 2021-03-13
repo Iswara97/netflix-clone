@@ -1,0 +1,35 @@
+.row {
+  color: white;
+  margin-left: 20px;
+}
+
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll; /* To have movie posters only scroll horizontally*/
+  padding: 20px; /*Avoiding cropping when hovering over */
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none; /* hidiing scroll bar*/
+}
+
+.poster {
+  object-fit: contain; /* Will maintain the aspect ratio*/
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px; /* Space between movie posters */
+  transition: transform 450ms; /* If size changes, add transition effect*/
+}
+
+.poster:hover {
+  transform: scale(1.08);
+}
+
+.posterLarge {
+  max-height: 250px;
+}
+
+.posterLarge:hover {
+  transform: scale(1.09);
+}
